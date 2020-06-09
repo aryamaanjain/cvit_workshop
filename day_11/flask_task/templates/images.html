@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+images
+{% endblock %}
+
+{% block body %}
+<h1> Images </h1>
+click on images to annotate <br/><br/>
+
+{% for f in filenames %}
+<a href="{{ url_for('annotate', filename=f[7:]) }}">
+	<img src={{ url_for('static', filename=f) }} />
+</a>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+index
+{% endblock %}
+
+{% block body %}
+<h1> Image App </h1>
+<ul>
+	<li>
+		<a href="{{ url_for('login') }}">Login</a>
+	</li>
+	<li>
+		<a href="{{ url_for('register') }}">Register</a>
+	</li>
+</ul>
+{% endblock %}
